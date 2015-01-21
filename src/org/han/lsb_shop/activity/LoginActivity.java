@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class LoginActivity extends Activity implements OnClickListener, Handler.Callback {
 	
 	private EditText username, password;
+	private String uname,pass;
 	private Button logbtn,regbtn;
 	
 	private ProgressDialog dialog;
@@ -53,24 +54,35 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 	public void onClick(View v) {System.out.println(2);
 		switch (v.getId()) {
 		case R.id.btn_login:
+			uname = username.getText().toString();
+			pass = password.getText().toString();
+			
+			if(StringUtils.isEmpty(uname)){
+				handler.sendMessage(handler.obtainMessage(-1,"工号不能为空"));
+				if(!username.hasFocus()){
+					username.setFocusable(true);
+					username.setFocusableInTouchMode(true);
+					username.requestFocus();
+					username.requestFocusFromTouch();
+				}
+				return;
+			}
+			
+			if(StringUtils.isEmpty(pass)){
+				handler.sendMessage(handler.obtainMessage(-1, "密码不能为空"));
+				if(!password.hasFocus()){
+					password.setFocusable(true);
+					password.setFocusableInTouchMode(true);
+					password.requestFocus();
+					password.requestFocusFromTouch();
+				}
+				return;
+			}
 			dialog = new ProgressDialog(this);
 			dialog.setMessage("正在登录...");
 			dialog.show();
 			new Thread() {
 				public void run() {
-					String uname = username.getText().toString();
-					String pass = password.getText().toString();
-					
-					if(StringUtils.isEmpty(uname)){
-						handler.sendMessage(handler.obtainMessage(-1,"工号不能为空"));
-						return;
-					}
-					
-					if(StringUtils.isEmpty(pass)){
-						handler.sendMessage(handler.obtainMessage(-1, "密码不能为空"));
-						return;
-					}
-					
 					map.clear();
 					map.put("jobNo", uname);
 					map.put("pass", pass);
@@ -112,13 +124,13 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 			String result = msg.obj.toString();
 			try {
 				JSONObject jsonobj = new JSONObject(result);
-				if ((jsonobj.getString("result").toLowerCase()).equals("true")) {
+				/*if ((jsonobj.getString("result").toLowerCase()).equals("true")) {
 					myapp.putInfo("jobNo",map.get("jobNo") );
-					myapp.putInfo("priv", StringUtils.trimToEmpty(jsonobj.getString("priv")));
+					myapp.putInfo("priv", StringUtils.trimToEmpty(jsonobj.getString("priv")));*/
 					startActivity(new Intent(this, MainActivity.class));
-				} else {
+				/*} else {
 					Toast.makeText(LoginActivity.this, jsonobj.getString("msg"), Toast.LENGTH_SHORT).show();
-				}
+				}*/
 			} catch (Exception e) {
 				Loger.e("TAG", e);
 				Toast.makeText(LoginActivity.this, "服务器返回异常", Toast.LENGTH_SHORT).show();
