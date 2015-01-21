@@ -61,7 +61,11 @@ public class MainActivity extends TabActivity implements OnClickListener, Handle
 		String priv = myapp.getPreferences().getString("priv", "");
 		if(priv.contains("10")){
 			tabHost.addTab(tabHost.newTabSpec(TAB_HOME).setIndicator(TAB_HOME).setContent(new Intent(this, ReportMenuOneActivity.class)));
-			radio0.setChecked(true);
+			tabHost.setCurrentTabByTag(TAB_HOME);
+			radio0.setTextColor(Color.parseColor("#7bb944"));
+			radio1.setTextColor(Color.parseColor("#ffffff"));
+			radio2.setTextColor(Color.parseColor("#ffffff"));
+			radio3.setTextColor(Color.parseColor("#ffffff"));
 		}else{
 			
 		}
