@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.han.lsb_shop.R;
 import org.han.lsb_shop.util.*;
+import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +29,9 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 	
 	private Map<String, String> map = new HashMap<String, String>();
 	private MyApplication myapp;
+	
+	private final int TRUE = 200;
+	private final int FALSE = 404;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,21 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 						return;
 					}
 					
-					
+					map.clear();
+					map.put("jobNo", uname);
+					map.put("pass", pass);
+					String result = Http_Value.login(map);
+					Message msg = handler.obtainMessage();
+					if (result != null) {
+						msg.what = TRUE;
+						msg.obj = result;
+						handler.sendMessage(msg);
+						return;
+					} else {
+						msg.what = FALSE;
+						handler.sendMessage(msg);
+						return;
+					}
 				};
 			}.start();
 			break;
@@ -84,13 +102,30 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 	public boolean handleMessage(Message msg) {
 		if (dialog != null && dialog.isShowing()) {
 			dialog.dismiss();
+			dialog.cancel();
 		}
 		switch (msg.what) {
 		case -1:
 			Toast.makeText(this, msg.obj.toString(), Toast.LENGTH_LONG).show();
 			break;
-		case 1:
-			startActivity(new Intent(this, MainActivity.class));
+		case TRUE:
+			String result = msg.obj.toString();
+			try {
+				JSONObject jsonobj = new JSONObject(result);
+				if ((jsonobj.getString("result").toLowerCase()).equals("true")) {
+					myapp.putInfo("jobNo",map.get("jobNo") );
+					myapp.putInfo("priv", StringUtils.trimToEmpty(jsonobj.getString("priv")));
+					startActivity(new Intent(this, MainActivity.class));
+				} else {
+					Toast.makeText(LoginActivity.this, jsonobj.getString("msg"), Toast.LENGTH_SHORT).show();
+				}
+			} catch (Exception e) {
+				Loger.e("TAG", e);
+				Toast.makeText(LoginActivity.this, "服务器返回异常", Toast.LENGTH_SHORT).show();
+			}
+			break;
+		case FALSE:
+			Toast.makeText(LoginActivity.this, "您的网络异常", Toast.LENGTH_SHORT).show();
 			break;
 		default:
 			break;
