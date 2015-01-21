@@ -23,6 +23,7 @@ public class RegActivity extends Activity implements OnClickListener,Handler.Cal
 	private Button saveBtn;
 	private ImageButton backBtn;
 	private EditText regName,regTel,regJobNo,regPass;
+	private String name,tel,jobNo,pass;
 	
 	private Handler handler;
 	private ProgressDialog dialog;

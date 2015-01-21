@@ -59,23 +59,13 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 			
 			if(StringUtils.isEmpty(uname)){
 				handler.sendMessage(handler.obtainMessage(-1,"工号不能为空"));
-				if(!username.hasFocus()){
-					username.setFocusable(true);
-					username.setFocusableInTouchMode(true);
-					username.requestFocus();
-					username.requestFocusFromTouch();
-				}
+				ViewUtils.getFocus(username);
 				return;
 			}
 			
 			if(StringUtils.isEmpty(pass)){
 				handler.sendMessage(handler.obtainMessage(-1, "密码不能为空"));
-				if(!password.hasFocus()){
-					password.setFocusable(true);
-					password.setFocusableInTouchMode(true);
-					password.requestFocus();
-					password.requestFocusFromTouch();
-				}
+				ViewUtils.getFocus(password);
 				return;
 			}
 			dialog = new ProgressDialog(this);
