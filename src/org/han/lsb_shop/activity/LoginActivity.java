@@ -78,7 +78,7 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 					map.clear();
 					map.put("jobNo", uname);
 					map.put("pass", pass);
-					String result = HttpServer.Login(map);
+					String result = HttpServer.login(map);
 					Message msg = handler.obtainMessage();
 					if (result != null) {
 						msg.what = TRUE;

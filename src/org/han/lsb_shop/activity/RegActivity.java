@@ -1,15 +1,22 @@
 package org.han.lsb_shop.activity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.han.lsb_shop.R;
 import org.han.lsb_shop.R.layout;
 import org.han.lsb_shop.R.menu;
+import org.han.lsb_shop.util.HttpServer;
+import org.han.lsb_shop.util.Loger;
 import org.han.lsb_shop.util.StringUtils;
+import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +26,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class RegActivity extends Activity implements OnClickListener,Handler.Callback{
+	
+	private final int TRUE = 200;
+	private final int FALSE = 404;
+	
+	private Map<String, String> map = new HashMap<String, String>();
 	
 	private Button saveBtn;
 	private ImageButton backBtn;
@@ -57,10 +69,15 @@ public class RegActivity extends Activity implements OnClickListener,Handler.Cal
 			dialog.show();
 			new Thread(){
 				public void run(){
+					map.clear();
 					String uname = regName.getText().toString();
 					String tel = regTel.getText().toString();
 					String jobNo = regJobNo.getText().toString();
 					String pass = regPass.getText().toString();
+					map.put("username", uname);
+					map.put("phone", tel);
+					map.put("jobNo", jobNo);
+					map.put("pass", StringUtils.trimToEmpty(pass));
 					if(StringUtils.isEmpty(uname)){
 						handler.sendMessage(handler.obtainMessage(-1, "姓名不能为空"));
 						return;
@@ -72,6 +89,16 @@ public class RegActivity extends Activity implements OnClickListener,Handler.Cal
 					if(StringUtils.isEmpty(jobNo)){
 						handler.sendMessage(handler.obtainMessage(-1, "工号不能为空"));
 						return;
+					}
+					String result = HttpServer.register(map);
+					Message msg = handler.obtainMessage();
+					if (result != null) {
+						msg.what = TRUE;
+						msg.obj = result;
+						handler.sendMessage(msg);
+					} else {
+						msg.what = FALSE;
+						handler.sendMessage(msg);
 					}
 				}
 			}.start();
@@ -91,7 +118,23 @@ public class RegActivity extends Activity implements OnClickListener,Handler.Cal
 		case -1:
 			Toast.makeText(this, msg.obj.toString(), Toast.LENGTH_LONG).show();
 			break;
-
+		case TRUE:
+			String result = msg.obj.toString();
+			try {
+				JSONObject obj = new JSONObject(result);
+				if(obj.get("result").toString().toLowerCase().equals("true")){
+					startActivity(new Intent(this, LoginActivity.class));
+				}else {
+					Toast.makeText(this, obj.get("msg").toString(), Toast.LENGTH_LONG).show();
+				}
+			} catch (Exception e) {
+				Loger.e("TAG", e);
+				Toast.makeText(this, "服务器返回异常", Toast.LENGTH_SHORT).show();
+			}
+			break;
+		case FALSE:
+			Toast.makeText(this, "您的网络异常", Toast.LENGTH_SHORT).show();
+			break;
 		default:
 			break;
 		}

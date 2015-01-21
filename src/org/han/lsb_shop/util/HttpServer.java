@@ -21,7 +21,7 @@ public class HttpServer {
 	 * @param map
 	 * @return
 	 */
-	public static String Login(Map<String, String> map) {
+	public static String login(Map<String, String> map) {
 		String result = HTTP.getString(HTTP_URL + "m_login", map, "post");
 		Loger.i(TAG, "登录-服务器返回:" + result);
 		return result;
@@ -33,9 +33,8 @@ public class HttpServer {
 	 * @param map
 	 * @return
 	 */
-	public static String Register(Map<String, String> map) {
+	public static String register(Map<String, String> map) {
 		String result = HTTP.getString(HTTP_URL + "m_register", map, "post");
-		// String result = "{\"result\":\"true\"}";
 		Loger.i(TAG, "注册-服务器返回:" + result);
 		return result;
 	}
