@@ -58,13 +58,15 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 			pass = password.getText().toString();
 			
 			if(StringUtils.isEmpty(uname)){
-				handler.sendMessage(handler.obtainMessage(-1,"工号不能为空"));
+				Toast.makeText(this, "工号不能为空", Toast.LENGTH_SHORT).show();
+				//handler.sendMessage(handler.obtainMessage(-1,"工号不能为空"));
 				ViewUtils.getFocus(username);
 				return;
 			}
 			
 			if(StringUtils.isEmpty(pass)){
-				handler.sendMessage(handler.obtainMessage(-1, "密码不能为空"));
+				Toast.makeText(this, "密码不能为空", Toast.LENGTH_SHORT).show();
+				//handler.sendMessage(handler.obtainMessage(-1, "密码不能为空"));
 				ViewUtils.getFocus(password);
 				return;
 			}
@@ -107,9 +109,6 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 			dialog.cancel();
 		}
 		switch (msg.what) {
-		case -1:
-			Toast.makeText(this, msg.obj.toString(), Toast.LENGTH_LONG).show();
-			break;
 		case TRUE:
 			String result = msg.obj.toString();
 			try {
