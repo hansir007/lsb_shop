@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">lsb_shop</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_reg">RegActivity</string>
+    <string name="title_activity_report_menu_one">ReportMenuOneActivity</string>
+    <string name="title_activity_menu_two">MenuTwoActivity</string>
+    <string name="title_activity_shishi_sale">ShishiSaleActivity</string>
+    <string name="title_activity_pandian_menu">PandianMenuActivity</string>
+    <string name="title_activity_shangmeng_menu">ShangmengMenuActivity</string>
+
+</resources>

@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#17AFEE" >
+        
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="零售宝注册"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/realat_userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realat_top"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="40dip" >
+
+        <EditText
+            android:id="@+id/reg_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:hint="姓名"
+            android:padding="10dip"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/reg_tel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_username"
+            android:layout_marginTop="-2dip"
+            android:background="@drawable/bg_edittext"
+            android:hint="电话"
+            android:inputType="number"
+            android:padding="10dip"
+            android:textSize="12sp" />
+        
+        <EditText
+            android:id="@+id/reg_gonghao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_tel"
+            android:layout_marginTop="-2dip"
+            android:background="@drawable/bg_edittext"
+            android:hint="工号"
+            android:padding="10dip"
+            android:textSize="12sp" />
+        
+        <EditText
+            android:id="@+id/reg_mima"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_gonghao"
+            android:layout_marginTop="-2dip"
+            android:background="@drawable/bg_edittext"
+            android:hint="密码"
+            android:padding="10dip"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_regsave"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/realat_userinfo"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/login_btn"
+        android:padding="5dip"
+        android:text="保存"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</RelativeLayout>

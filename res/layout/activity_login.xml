@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#17AFEE" >
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="30dip"
+            android:text="零售宝"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myname"
+            android:layout_alignLeft="@+id/myname"
+            android:text="Commercial Retail Tools"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/realat_userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realat_top"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="40dip" >
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:drawableLeft="@drawable/username_icon"
+            android:hint="工号"
+            android:padding="10dip"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edit_userpwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_username"
+            android:layout_marginTop="-2dip"
+            android:background="@drawable/bg_edittext"
+            android:drawableLeft="@drawable/psd_icon"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:padding="10dip"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/realat_userinfo"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/login_btn"
+        android:padding="5dip"
+        android:text="登 录"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:layout_below="@+id/btn_login"
+        android:layout_alignRight="@+id/btn_login"
+        android:background="@null"
+        android:text="注册"
+        android:textColor="#555555"
+        android:textSize="12dip" />
+
+</RelativeLayout>

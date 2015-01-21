@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.han.lsb_shop"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取手机录音机使用权限,听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/BlackTheme" >
+        <activity
+            android:name="org.han.lsb_shop.activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.RegActivity"
+            android:label="@string/title_activity_reg" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ReportMenuOneActivity"
+            android:label="@string/title_activity_report_menu_one" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.MenuTwoActivity"
+            android:label="@string/title_activity_menu_two" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ShishiSaleActivity"
+            android:label="@string/title_activity_shishi_sale" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.PandianMenuActivity"
+            android:label="@string/title_activity_pandian_menu" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ShangmengMenuActivity"
+            android:label="@string/title_activity_shangmeng_menu" >
+        </activity>
+    </application>
+
+</manifest>

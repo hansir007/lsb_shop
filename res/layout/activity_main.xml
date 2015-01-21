@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#17AFEE" >
+        
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="零售宝"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+    
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/realat_top" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="#FFFFFF" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <RadioButton
+                    android:id="@+id/radio_0"
+                    style="@style/main_tab_bottom"
+                    android:checked="true"
+                    android:tag="radio_button0"
+                    android:text="报表"
+                    android:textColor="#7bb944" />
+
+                <RadioButton
+                    android:id="@+id/radio_1"
+                    style="@style/main_tab_bottom"
+                    android:tag="radio_button1"
+                    android:text="盘点" /> 
+
+                <RadioButton
+                    android:id="@+id/radio_2"
+                    style="@style/main_tab_bottom"
+                    android:tag="radio_button2" 
+                    android:text="商盟" />
+
+                <RadioButton
+                    android:id="@+id/radio_3"
+                    style="@style/main_tab_bottom"
+                    android:tag="radio_button3"
+                    android:text="更多" />
+            </RadioGroup>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
