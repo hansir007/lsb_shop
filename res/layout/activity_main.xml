@@ -71,10 +71,9 @@
                 <RadioButton
                     android:id="@+id/radio_0"
                     style="@style/main_tab_bottom"
-                    android:checked="true"
                     android:tag="radio_button0"
                     android:text="报表"
-                    android:textColor="#7bb944" />
+                     />
 
                 <RadioButton
                     android:id="@+id/radio_1"

@@ -116,6 +116,8 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 				/*if ((jsonobj.getString("result").toLowerCase()).equals("true")) {
 					myapp.putInfo("jobNo",map.get("jobNo") );
 					myapp.putInfo("priv", StringUtils.trimToEmpty(jsonobj.getString("priv")));*/
+					myapp.putInfo("priv", "20,30");
+					Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
 					startActivity(new Intent(this, MainActivity.class));
 				/*} else {
 					Toast.makeText(LoginActivity.this, jsonobj.getString("msg"), Toast.LENGTH_SHORT).show();
