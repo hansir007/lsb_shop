@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.han.lsb_shop.R;
-import org.han.lsb_shop.util.StringUtils;
+import org.han.lsb_shop.util.*;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,7 +12,6 @@ import android.os.Message;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -28,6 +27,7 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 	private Handler handler;
 	
 	private Map<String, String> map = new HashMap<String, String>();
+	private MyApplication myapp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,7 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 		setContentView(R.layout.activity_login);
 		
 		handler = new Handler(this);
-		
-		map.clear();
+		myapp = (MyApplication)getApplication();
 		
 		logbtn = (Button)findViewById(R.id.btn_login);
 		regbtn = (Button)findViewById(R.id.btn_register);
@@ -68,41 +67,7 @@ public class LoginActivity extends Activity implements OnClickListener, Handler.
 						return;
 					}
 					
-					handler.sendMessage(handler.obtainMessage(1, "登录成功~!"));
-					/*String padid = application.getValue("padid");// 0001
-					String ip = application.getValue("ip");// 192.168.1.13
-					String port = application.getValue("port");// 8000
-					String mendian = application.getValue("mendian");// 8000
-					String para = "\"findipad\",\"1\",\"55\",\"" + mendian + "\",\"" + padid + "\",\"" + ip + "\",\"" + port + "\",\"2013.06.30\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"";
-					String result = WebService.getWebService(application).verify(para);
-					if (result == null) {
-						handler.sendMessage(handler.obtainMessage(-1, "连接失败!"));
-						return;
-					}
-					String[] values = result.split(";");
-					Log.d("NFC", "values[] length=" + values.length);
-					if (!"1".equals(values[0])) {
-						handler.sendMessage(handler.obtainMessage(-1, "设备验证失败"));
-						return;
-					}
-					para = "\"findper\",\"1\",\"55\",\"" + mendian + "\",\"" + username + "\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"";
-					result = WebService.getWebService(application).verify(para);
-					if (result == null) {
-						handler.sendMessage(handler.obtainMessage(-1, "连接失败!"));
-						return;
-					}
-					values = result.split(";");
-					Log.d("NFC", "values[] length=" + values.length);
-					if (!"1".equals(values[0].trim())) {
-						handler.sendMessage(handler.obtainMessage(-1, "登陆验证失败"));
-						return;
-					}
-					if (!password.equals(values[5].trim())) {
-						handler.sendMessage(handler.obtainMessage(-1, "密码错误"));
-						return;
-					}
-					application.putValue("username", username);
-					handler.sendMessage(handler.obtainMessage(1, "登陆成功~!"));*/
+					
 				};
 			}.start();
 			break;
