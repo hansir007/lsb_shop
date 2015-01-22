@@ -3,23 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:launchMode="singleTask"
-    android:screenOrientation="landscape" >
+    android:id="@+id/myid" >
 
     <RelativeLayout
         android:id="@+id/realat_top"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
         android:background="#17AFEE" >
 
         <ImageButton
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:background="@null"
-            android:padding="10dip"
+            android:padding="4dip"
             android:src="@drawable/back_btn" />
 
         <TextView
@@ -33,12 +32,67 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <org.han.lsb_shop.ShishiSaleView
-        android:id="@+id/myview"
+    <LinearLayout
+        android:id="@+id/biaotao"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/realat_top" >
-    </org.han.lsb_shop.ShishiSaleView>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realat_top"
+        android:background="#103E5C"
+        android:orientation="horizontal" >
 
+        <TextView
+            android:id="@+id/mendian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="门店" />
 
+        <TextView
+            android:id="@+id/shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="数量" />
+
+        <TextView
+            android:id="@+id/shouru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="收入" />
+        
+        <TextView
+            android:id="@+id/chengben"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="成本" />
+        
+        <TextView
+            android:id="@+id/maoli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="毛利" />
+    </LinearLayout>
+    
+    <ListView 
+        android:id="@+id/shishi_sale_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/biaotao"
+         >
+        
+    </ListView>
+    
 </RelativeLayout>

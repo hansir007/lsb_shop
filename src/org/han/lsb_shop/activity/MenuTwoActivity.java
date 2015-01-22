@@ -42,7 +42,6 @@ public class MenuTwoActivity extends Activity {
 		gridView = (GridView)findViewById(R.id.report_menu_two);
 
 		ArrayList<HashMap<String, Object>> lst = new ArrayList<HashMap<String, Object>>();
-
 		
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put("itemImage", R.drawable.ssxs); 
