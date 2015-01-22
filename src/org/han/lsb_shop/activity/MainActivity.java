@@ -67,7 +67,7 @@ public class MainActivity extends TabActivity implements OnClickListener, Handle
 			radio2.setTextColor(Color.parseColor("#ffffff"));
 			radio3.setTextColor(Color.parseColor("#ffffff"));
 		}else{
-			
+			tabHost.addTab(tabHost.newTabSpec(TAB_HOME).setIndicator(TAB_HOME).setContent(new Intent(this, BlankMenuActivity.class)));
 		}
 		if(priv.contains("20")){
 			tabHost.addTab(tabHost.newTabSpec(TAB_PAY).setIndicator(TAB_PAY).setContent(new Intent(this, PandianMenuActivity.class)));
@@ -79,7 +79,7 @@ public class MainActivity extends TabActivity implements OnClickListener, Handle
 				radio3.setTextColor(Color.parseColor("#ffffff"));
 			}
 		}else{
-			
+			tabHost.addTab(tabHost.newTabSpec(TAB_PAY).setIndicator(TAB_PAY).setContent(new Intent(this, BlankMenuActivity.class)));
 		}
 		if(priv.contains("30")){
 			tabHost.addTab(tabHost.newTabSpec(TAB_MYSELF).setIndicator(TAB_MYSELF).setContent(new Intent(this, ShangmengMenuActivity.class)));
@@ -91,9 +91,9 @@ public class MainActivity extends TabActivity implements OnClickListener, Handle
 				radio3.setTextColor(Color.parseColor("#ffffff"));
 			}
 		}else {
-			
+			tabHost.addTab(tabHost.newTabSpec(TAB_MYSELF).setIndicator(TAB_MYSELF).setContent(new Intent(this, BlankMenuActivity.class)));
 		}
-		
+		tabHost.addTab(tabHost.newTabSpec(TAB_MORE).setIndicator(TAB_MORE).setContent(new Intent(this, BlankMenuActivity.class)));
 		/*tabHost.addTab(tabHost.newTabSpec(TAB_MORE).setIndicator(TAB_MORE).setContent(new Intent(this, MoreActivity.class)));
 		final RadioButton radio0 = (RadioButton) findViewById(R.id.radio_0);
 		final RadioButton radio1 = (RadioButton) findViewById(R.id.radio_1);

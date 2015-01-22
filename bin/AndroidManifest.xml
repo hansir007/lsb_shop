@@ -67,6 +67,10 @@
             android:name="org.han.lsb_shop.activity.ShangmengMenuActivity"
             android:label="@string/title_activity_shangmeng_menu" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.BlankMenuActivity"
+            android:label="@string/title_activity_blank_menu" >
+        </activity>
     </application>
 
 </manifest>

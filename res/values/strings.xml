@@ -11,5 +11,6 @@
     <string name="title_activity_shishi_sale">ShishiSaleActivity</string>
     <string name="title_activity_pandian_menu">PandianMenuActivity</string>
     <string name="title_activity_shangmeng_menu">ShangmengMenuActivity</string>
+    <string name="title_activity_blank_menu">BlankMenuActivity</string>
 
 </resources>

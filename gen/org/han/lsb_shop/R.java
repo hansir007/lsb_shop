@@ -71,31 +71,34 @@ public final class R {
         public static final int textView_ItemText=0x7f080019;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_menu_two=0x7f030002;
-        public static final int activity_pandian_menu=0x7f030003;
-        public static final int activity_reg=0x7f030004;
-        public static final int activity_report_menu_one=0x7f030005;
-        public static final int activity_shangmeng_menu=0x7f030006;
-        public static final int activity_shishi_sale=0x7f030007;
-        public static final int gridview_item=0x7f030008;
-        public static final int shishi_sale_listview=0x7f030009;
+        public static final int activity_blank_menu=0x7f030000;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_menu_two=0x7f030003;
+        public static final int activity_pandian_menu=0x7f030004;
+        public static final int activity_reg=0x7f030005;
+        public static final int activity_report_menu_one=0x7f030006;
+        public static final int activity_shangmeng_menu=0x7f030007;
+        public static final int activity_shishi_sale=0x7f030008;
+        public static final int gridview_item=0x7f030009;
+        public static final int shishi_sale_listview=0x7f03000a;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
-        public static final int main=0x7f070001;
-        public static final int menu_two=0x7f070002;
-        public static final int pandian_menu=0x7f070003;
-        public static final int reg=0x7f070004;
-        public static final int report_menu_one=0x7f070005;
-        public static final int shangmeng_menu=0x7f070006;
-        public static final int shishi_sale=0x7f070007;
+        public static final int blank_menu=0x7f070000;
+        public static final int login=0x7f070001;
+        public static final int main=0x7f070002;
+        public static final int menu_two=0x7f070003;
+        public static final int pandian_menu=0x7f070004;
+        public static final int reg=0x7f070005;
+        public static final int report_menu_one=0x7f070006;
+        public static final int shangmeng_menu=0x7f070007;
+        public static final int shishi_sale=0x7f070008;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
+        public static final int title_activity_blank_menu=0x7f05000a;
         public static final int title_activity_main=0x7f050003;
         public static final int title_activity_menu_two=0x7f050006;
         public static final int title_activity_pandian_menu=0x7f050008;
