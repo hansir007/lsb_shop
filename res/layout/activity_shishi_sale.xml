@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:id="@+id/myid" >
+     >
 
     <RelativeLayout
         android:id="@+id/realat_top"
@@ -32,7 +32,7 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <LinearLayout
+    <!-- <LinearLayout
         android:id="@+id/biaotao"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -93,6 +93,17 @@
         android:layout_below="@+id/biaotao"
          >
         
-    </ListView>
+    </ListView> -->
+    
+    <org.han.lsb_shop.view.XListView
+        android:id="@+id/listview_notices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/realat_top"
+        android:background="#f2f2f2"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="0px" >
+    </org.han.lsb_shop.view.XListView>
     
 </RelativeLayout>
