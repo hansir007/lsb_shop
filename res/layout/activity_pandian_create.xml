@@ -60,7 +60,7 @@
                 android:orientation="vertical" >
 
                 <RadioGroup
-                    android:id="@+id/group"
+                    android:id="@+id/fsgroup"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:checkedButton="@+id/button1"
@@ -114,7 +114,7 @@
                 android:visibility="gone" >
 
                 <RadioGroup
-                    android:id="@+id/groupf"
+                    android:id="@+id/fwgroup"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
@@ -287,7 +287,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_start"
                 android:layout_width="fill_parent"
                 android:layout_height="30dip"
                 android:layout_below="@+id/ll_3"

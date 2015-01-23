@@ -1,4 +1,8 @@
-package org.han.lsb_shop;
+package org.han.lsb_shop.activity;
+
+import org.han.lsb_shop.R;
+import org.han.lsb_shop.R.layout;
+import org.han.lsb_shop.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;

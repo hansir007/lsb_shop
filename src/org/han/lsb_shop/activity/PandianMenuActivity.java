@@ -3,7 +3,6 @@ package org.han.lsb_shop.activity;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.han.lsb_shop.PandianCuolouIndexActivity;
 import org.han.lsb_shop.R;
 import org.han.lsb_shop.R.layout;
 import org.han.lsb_shop.R.menu;
