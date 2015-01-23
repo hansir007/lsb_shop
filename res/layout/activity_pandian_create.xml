@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#17AFEE" >
+        
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="移动盘点"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/s_"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/realat_top"
+        android:padding="10dip"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edit_normal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dip"
+                        android:text="协作标题:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/txt_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView1"
+                        android:layout_alignBottom="@+id/textView1"
+                        android:layout_toRightOf="@+id/textView1"
+                        android:background="@null"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.3dip"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:background="@drawable/leba_shape_line" />
+
+                <RelativeLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dip"
+                        android:text="接  收  人:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+               <!--  <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.3dip"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="3dip"
+                    android:background="@drawable/leba_shape_line" /> -->
+
+            </LinearLayout>
+
+            <!-- <Button
+                android:id="@+id/btn_tj"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/ll_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:text="新\u0020\u0020\u0020建"
+                android:textColor="@color/white"
+                android:textSize="20sp" /> -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

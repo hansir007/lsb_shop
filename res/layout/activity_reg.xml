@@ -32,7 +32,7 @@
         
     </RelativeLayout>
 
-    <RelativeLayout
+    <!-- <RelativeLayout
         android:id="@+id/realat_userinfo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -83,6 +83,176 @@
             android:hint="密码"
             android:padding="10dip"
             android:textSize="12sp" />
+    </RelativeLayout> -->
+    <RelativeLayout
+        android:id="@+id/realat_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realat_top"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="40dip" >
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edit_normal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dip"
+                    android:text="姓名:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/reg_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView1"
+                    android:layout_alignBottom="@+id/textView1"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:background="@null"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:background="@drawable/leba_shape_line" />
+
+            <RelativeLayout
+                android:id="@+id/ll2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dip"
+                    android:text="电话:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/reg_tel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_toRightOf="@+id/textView2"
+                    android:background="@null"
+                    android:text=""
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:background="@drawable/leba_shape_line" />
+
+            <RelativeLayout
+                android:id="@+id/ll3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dip"
+                    android:text="工号:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/reg_gonghao"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView3"
+                    android:layout_alignBottom="@+id/textView3"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:background="@null"
+                    android:text=""
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:background="@drawable/leba_shape_line" />
+
+            <RelativeLayout
+                android:id="@+id/ll4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dip"
+                    android:text="密码:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/reg_mima"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView4"
+                    android:layout_alignBottom="@+id/textView4"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:background="@null"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 
     <Button

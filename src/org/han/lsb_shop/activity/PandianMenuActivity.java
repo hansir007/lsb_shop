@@ -3,6 +3,7 @@ package org.han.lsb_shop.activity;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.han.lsb_shop.PandianCuolouIndexActivity;
 import org.han.lsb_shop.R;
 import org.han.lsb_shop.R.layout;
 import org.han.lsb_shop.R.menu;
@@ -66,9 +67,9 @@ public class PandianMenuActivity extends Activity {
 			
 			Intent intent = new Intent();
 			if(itemId.equals("pandian")){
-				intent.setClass(PandianMenuActivity.this, MenuTwoActivity.class);
+				intent.setClass(PandianMenuActivity.this, PandianCreateActivity.class);
 			}else if(itemId.equals("cuolou")){
-				intent.setClass(PandianMenuActivity.this, MenuTwoActivity.class);
+				intent.setClass(PandianMenuActivity.this, PandianCuolouIndexActivity.class);
 			}
 			startActivity(intent);
 			//Toast.makeText(getApplicationContext(), ""+str, 0).show();

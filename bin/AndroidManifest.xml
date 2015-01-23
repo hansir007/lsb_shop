@@ -75,6 +75,14 @@
             android:name="org.han.lsb_shop.activity.ShishiSaleTubiaoActivity"
             android:label="@string/title_activity_shishi_sale_tubiao" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.PandianCreateActivity"
+            android:label="@string/title_activity_pandian_create" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.PandianCuolouIndexActivity"
+            android:label="@string/title_activity_pandian_cuolou_index" >
+        </activity>
     </application>
 
 </manifest>
