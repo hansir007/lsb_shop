@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="#17AFEE" >
-        
+
         <ImageButton
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
@@ -29,7 +29,6 @@
             android:text="移动盘点"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
-        
     </RelativeLayout>
 
     <ScrollView
@@ -45,10 +44,132 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
+            <TextView
+                android:id="@+id/view11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="盘点方式"
+                android:textColor="#666666" />
+
             <LinearLayout
                 android:id="@+id/ll_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/view11"
+                android:background="@drawable/login_edit_normal"
+                android:orientation="vertical" >
+
+                <RadioGroup
+                    android:id="@+id/group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/button1"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/button1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="全部盘点"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dip"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/leba_shape_line" />
+
+                    <RadioButton
+                        android:id="@+id/button2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="抽样盘点"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_1"
+                android:text="盘点范围"
+                android:textColor="#666666"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view12"
+                android:background="@drawable/login_edit_normal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RadioGroup
+                    android:id="@+id/groupf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/button3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="柜组"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dip"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/leba_shape_line" />
+
+                    <RadioButton
+                        android:id="@+id/button4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="类别"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dip"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/leba_shape_line" />
+
+                    <RadioButton
+                        android:id="@+id/button5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="供应商"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_2"
                 android:background="@drawable/login_edit_normal"
                 android:orientation="vertical" >
 
@@ -66,18 +187,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="8dip"
-                        android:text="协作标题:"
+                        android:text="盘点日:"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
                     <EditText
-                        android:id="@+id/txt_title"
+                        android:id="@+id/pandianri"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignBaseline="@+id/textView1"
                         android:layout_alignBottom="@+id/textView1"
                         android:layout_toRightOf="@+id/textView1"
                         android:background="@null"
+                        android:inputType="number"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="16sp" />
@@ -106,31 +228,75 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="8dip"
-                        android:text="接  收  人:"
+                        android:text="ID:"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
+                    <EditText
+                        android:id="@+id/pandianid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView2"
+                        android:layout_alignBottom="@+id/textView2"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:background="@null"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                 </RelativeLayout>
 
-               <!--  <ImageView
+                <ImageView
                     android:layout_width="fill_parent"
                     android:layout_height="0.3dip"
-                    android:layout_marginLeft="3dip"
-                    android:layout_marginRight="3dip"
-                    android:background="@drawable/leba_shape_line" /> -->
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:background="@drawable/leba_shape_line" />
 
+                <RelativeLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dip"
+                        android:text="柜组:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/guizu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView2"
+                        android:layout_alignBottom="@+id/textView2"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:background="@null"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
             </LinearLayout>
 
-            <!-- <Button
-                android:id="@+id/btn_tj"
+            <Button
+                android:id="@+id/btn_login"
                 android:layout_width="fill_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dip"
                 android:layout_below="@+id/ll_3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dip"
-                android:text="新\u0020\u0020\u0020建"
-                android:textColor="@color/white"
-                android:textSize="20sp" /> -->
+                android:layout_marginTop="15dip"
+                android:background="@drawable/login_btn"
+                android:padding="5dip"
+                android:text="开始盘点"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
         </RelativeLayout>
     </ScrollView>
 
