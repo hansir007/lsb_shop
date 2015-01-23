@@ -30,5 +30,33 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </RelativeLayout>
+    
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/realat_top"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/login_btn"
+        android:padding="5dip"
+        android:text="扫描二维码/条码"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+    
+    <Button
+        android:id="@+id/btn_inputM"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/btn_scan"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/login_btn"
+        android:padding="5dip"
+        android:text="手动输码"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
 
 </RelativeLayout>
