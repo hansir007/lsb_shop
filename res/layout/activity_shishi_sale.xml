@@ -30,6 +30,17 @@
             android:text="实时销售"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/tubiao"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dip"
+            android:text="图表"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
     </RelativeLayout>
 
     <!-- <LinearLayout

@@ -32,8 +32,7 @@
         android:theme="@style/BlackTheme" >
         <activity
             android:name="org.han.lsb_shop.activity.LoginActivity"
-            android:label="@string/app_name"
-             >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -71,6 +70,10 @@
         <activity
             android:name="org.han.lsb_shop.activity.BlankMenuActivity"
             android:label="@string/title_activity_blank_menu" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ShishiSaleTubiaoActivity"
+            android:label="@string/title_activity_shishi_sale_tubiao" >
         </activity>
     </application>
 

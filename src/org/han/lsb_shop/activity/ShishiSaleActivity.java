@@ -60,6 +60,7 @@ public class ShishiSaleActivity extends Activity implements OnClickListener,
 		handler = new Handler(this);
 		dlg_progressbar = new AlertDialog.Builder(ShishiSaleActivity.this).create();
 		findViewById(R.id.btn_back).setOnClickListener(this);
+		findViewById(R.id.tubiao).setOnClickListener(this);
 		listview_notices = (XListView) findViewById(R.id.listview_notices);
 		adapter = new ShishiSaleAdapter(ShishiSaleActivity.this, lists, this);
 		listview_notices.setPullLoadEnable(true);
@@ -103,16 +104,10 @@ public class ShishiSaleActivity extends Activity implements OnClickListener,
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		/*
-		 * case R.id.relative: int position = ((Integer) v.getTag()).intValue();
-		 * String url = DefaultValues.HTTP_URL + "mobile/notice?id=" +
-		 * lists.get(position).getNotice_id(); startActivity(new
-		 * Intent(Notice_Activity.this, WebViewActivity.class).putExtra("tar",
-		 * "通知公告").putExtra("url", url).putExtra("title",
-		 * lists.get(position).getNotice_title())); break;
-		 */
+		case R.id.tubiao:
+			startActivity(new Intent(ShishiSaleActivity.this, ShishiSaleTubiaoActivity.class));
+			break;
 		case R.id.btn_back:
 			finish();
 			break;

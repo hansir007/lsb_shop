@@ -43,19 +43,20 @@ public final class R {
         public static final int xlistview_arrow=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090029;
+        public static final int action_settings=0x7f09002b;
         public static final int btn_back=0x7f090007;
         public static final int btn_login=0x7f090005;
         public static final int btn_register=0x7f090006;
         public static final int btn_regsave=0x7f090013;
-        public static final int chengben_db=0x7f09001e;
+        public static final int chengben_db=0x7f090020;
         public static final int edit_username=0x7f090003;
         public static final int edit_userpwd=0x7f090004;
-        public static final int imageView_ItemImage=0x7f090018;
-        public static final int listview_notices=0x7f090016;
+        public static final int imageView_ItemImage=0x7f09001a;
+        public static final int listview_notices=0x7f090017;
+        public static final int litubiao=0x7f090018;
         public static final int main_radio=0x7f090008;
-        public static final int maoli_db=0x7f09001f;
-        public static final int mendian_db=0x7f09001b;
+        public static final int maoli_db=0x7f090021;
+        public static final int mendian_db=0x7f09001d;
         public static final int myname=0x7f090001;
         public static final int pandian_menu=0x7f09000e;
         public static final int radio_0=0x7f090009;
@@ -68,23 +69,24 @@ public final class R {
         public static final int reg_mima=0x7f090012;
         public static final int reg_tel=0x7f090010;
         public static final int reg_username=0x7f09000f;
-        public static final int relativeLayout1=0x7f090017;
+        public static final int relativeLayout1=0x7f090019;
         public static final int report_menu_one=0x7f090014;
         public static final int report_menu_two=0x7f09000d;
         public static final int shangmeng_menu=0x7f090015;
-        public static final int shishi_db=0x7f09001a;
-        public static final int shouru_db=0x7f09001d;
-        public static final int shuliang_db=0x7f09001c;
-        public static final int textView_ItemText=0x7f090019;
-        public static final int xlistview_footer_content=0x7f090020;
-        public static final int xlistview_footer_hint_textview=0x7f090022;
-        public static final int xlistview_footer_progressbar=0x7f090021;
-        public static final int xlistview_header_arrow=0x7f090027;
-        public static final int xlistview_header_content=0x7f090023;
-        public static final int xlistview_header_hint_textview=0x7f090025;
-        public static final int xlistview_header_progressbar=0x7f090028;
-        public static final int xlistview_header_text=0x7f090024;
-        public static final int xlistview_header_time=0x7f090026;
+        public static final int shishi_db=0x7f09001c;
+        public static final int shouru_db=0x7f09001f;
+        public static final int shuliang_db=0x7f09001e;
+        public static final int textView_ItemText=0x7f09001b;
+        public static final int tubiao=0x7f090016;
+        public static final int xlistview_footer_content=0x7f090022;
+        public static final int xlistview_footer_hint_textview=0x7f090024;
+        public static final int xlistview_footer_progressbar=0x7f090023;
+        public static final int xlistview_header_arrow=0x7f090029;
+        public static final int xlistview_header_content=0x7f090025;
+        public static final int xlistview_header_hint_textview=0x7f090027;
+        public static final int xlistview_header_progressbar=0x7f09002a;
+        public static final int xlistview_header_text=0x7f090026;
+        public static final int xlistview_header_time=0x7f090028;
     }
     public static final class layout {
         public static final int activity_blank_menu=0x7f030000;
@@ -96,10 +98,11 @@ public final class R {
         public static final int activity_report_menu_one=0x7f030006;
         public static final int activity_shangmeng_menu=0x7f030007;
         public static final int activity_shishi_sale=0x7f030008;
-        public static final int gridview_item=0x7f030009;
-        public static final int listview_shishi_sale=0x7f03000a;
-        public static final int xlistview_footer=0x7f03000b;
-        public static final int xlistview_header=0x7f03000c;
+        public static final int activity_shishi_sale_tubiao=0x7f030009;
+        public static final int gridview_item=0x7f03000a;
+        public static final int listview_shishi_sale=0x7f03000b;
+        public static final int xlistview_footer=0x7f03000c;
+        public static final int xlistview_header=0x7f03000d;
     }
     public static final class menu {
         public static final int blank_menu=0x7f080000;
@@ -111,6 +114,7 @@ public final class R {
         public static final int report_menu_one=0x7f080006;
         public static final int shangmeng_menu=0x7f080007;
         public static final int shishi_sale=0x7f080008;
+        public static final int shishi_sale_tubiao=0x7f080009;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
@@ -124,6 +128,7 @@ public final class R {
         public static final int title_activity_report_menu_one=0x7f060005;
         public static final int title_activity_shangmeng_menu=0x7f060009;
         public static final int title_activity_shishi_sale=0x7f060007;
+        public static final int title_activity_shishi_sale_tubiao=0x7f060011;
         public static final int xlistview_footer_hint_normal=0x7f06000f;
         public static final int xlistview_footer_hint_ready=0x7f060010;
         public static final int xlistview_header_hint_loading=0x7f06000d;
