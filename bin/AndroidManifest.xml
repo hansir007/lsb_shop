@@ -83,6 +83,10 @@
             android:name="org.han.lsb_shop.activity.PandianCuolouIndexActivity"
             android:label="@string/title_activity_pandian_cuolou_index" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.PandianActivity"
+            android:label="@string/title_activity_pandian" >
+        </activity>
     </application>
 
 </manifest>

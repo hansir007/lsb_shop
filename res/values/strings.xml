@@ -21,5 +21,6 @@
     <string name="title_activity_shishi_sale_tubiao">ShishiSaleTubiaoActivity</string>
     <string name="title_activity_pandian_create">PandianCreateActivity</string>
     <string name="title_activity_pandian_cuolou_index">PandianCuolouIndexActivity</string>
+    <string name="title_activity_pandian">PandianActivity</string>
 
 </resources>
