@@ -43,13 +43,14 @@
             android:textSize="12sp" />
     </RelativeLayout>
 
-    <!-- <LinearLayout
-        android:id="@+id/biaotao"
+    <LinearLayout
+        android:id="@+id/biaotou"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/realat_top"
         android:background="#103E5C"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone" >
 
         <TextView
             android:id="@+id/mendian"
@@ -97,20 +98,11 @@
             android:text="毛利" />
     </LinearLayout>
     
-    <ListView 
-        android:id="@+id/shishi_sale_listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/biaotao"
-         >
-        
-    </ListView> -->
-    
     <org.han.lsb_shop.view.XListView
         android:id="@+id/listview_notices"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/realat_top"
+        android:layout_below="@+id/biaotou"
         android:background="#f2f2f2"
         android:cacheColorHint="#00000000"
         android:divider="#00000000"

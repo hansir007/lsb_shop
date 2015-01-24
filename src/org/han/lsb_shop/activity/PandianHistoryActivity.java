@@ -25,7 +25,9 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PandianHistoryActivity extends Activity implements OnClickListener,IXListViewListener,Callback {
@@ -38,9 +40,12 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 	private XListView listview_notices;
 	private PandianHistoryAdapter adapter;
 	
+	private TextView id,bianhao,tiaoma,mingcheng,danwei,shuliang,shoujia;
+	
 	private final int TRUE = 200;
 	private final int FALSE = 404;
 	private int start = 1;
+	private int width;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,23 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 		setContentView(R.layout.activity_pandian_history);
 		
 		findViewById(R.id.btn_back).setOnClickListener(this);
+		
+		WindowManager wm = this.getWindowManager();
+		width = wm.getDefaultDisplay().getWidth();
+		id = (TextView)findViewById(R.id.id);
+		bianhao = (TextView)findViewById(R.id.bianhao);
+		tiaoma = (TextView)findViewById(R.id.tiaoma);
+		mingcheng = (TextView)findViewById(R.id.mingcheng);
+		danwei = (TextView)findViewById(R.id.danwei);
+		shuliang = (TextView)findViewById(R.id.shuliang);
+		shoujia = (TextView)findViewById(R.id.shoujia);
+		id.setWidth(width/100*10);
+		bianhao.setWidth(width/100*10);
+		tiaoma.setWidth(width/100*20);
+		mingcheng.setWidth(width/100*20);
+		danwei.setWidth(width/100*10);
+		shuliang.setWidth(width/100*10);
+		shoujia.setWidth(width/100*10);
 		
 		myapp = (MyApplication) getApplication();
 		handler = new Handler(this);
@@ -58,7 +80,7 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 		listview_notices.setXListViewListener(this);
 		listview_notices.setAdapter(adapter);
 		lists.clear();
-		Map<String, String> dmap = new HashMap<String, String>();
+		/*Map<String, String> dmap = new HashMap<String, String>();
 		dmap.put("id", "序号");
 		dmap.put("bianma", "编码");
 		dmap.put("tiaoma", "条码");
@@ -67,7 +89,7 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 		dmap.put("shuliang", "数量");
 		dmap.put("shoujia", "售价");
 		dmap.put("jine", "金额");
-		lists.add(dmap);
+		lists.add(dmap);*/
 		if (!dlg_progressbar.isShowing()) {
 			dlg_progressbar.show();
 			// 禁止back键取消对话框
@@ -118,7 +140,7 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 	public void onRefresh() {
 		// TODO Auto-generated method stub
 		lists.clear();
-		Map<String, String> dmap = new HashMap<String, String>();
+		/*Map<String, String> dmap = new HashMap<String, String>();
 		dmap.put("id", "序号");
 		dmap.put("bianma", "编码");
 		dmap.put("tiaoma", "条码");
@@ -127,7 +149,7 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 		dmap.put("shuliang", "数量");
 		dmap.put("shoujia", "售价");
 		dmap.put("jine", "金额");
-		lists.add(dmap);
+		lists.add(dmap);*/
 		start = 1;
 		handler.postDelayed(new Runnable() {
 			@Override
@@ -191,7 +213,7 @@ public class PandianHistoryActivity extends Activity implements OnClickListener,
 				 * else { Toast.makeText(Notice_Activity.this,
 				 * jsonobj.getString("message"), Toast.LENGTH_SHORT).show(); }
 				 */
-				
+				findViewById(R.id.biaotou).setVisibility(View.VISIBLE);
 				for (int i = 0; i < 10; i++) {
 					Map<String, String> dmap = new HashMap<String, String>();
 					dmap.put("id", String.valueOf(i+1));

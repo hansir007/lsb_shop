@@ -41,11 +41,94 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
     </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/biaotou"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realat_top"
+        android:background="#103E5C"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="序号" />
+
+        <TextView
+            android:id="@+id/bianhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="编号" />
+
+        <TextView
+            android:id="@+id/tiaoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="条码" />
+        
+        <TextView
+            android:id="@+id/mingcheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="名称" />
+        
+        <TextView
+            android:id="@+id/danwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="单位" />
+        
+         <TextView
+            android:id="@+id/shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="数量" />
+         
+          <TextView
+            android:id="@+id/shoujia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="售价" />
+          
+           <TextView
+            android:id="@+id/jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="金额" />
+    </LinearLayout>
+    
     <org.han.lsb_shop.view.XListView
         android:id="@+id/listview_notices"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/realat_top"
+        android:layout_below="@+id/biaotou"
         android:background="#f2f2f2"
         android:cacheColorHint="#00000000"
         android:divider="#00000000"
