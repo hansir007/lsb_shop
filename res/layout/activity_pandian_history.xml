@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#17AFEE" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="4dip"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="盘点历史"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/tubiao"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dip"
+            android:text="上传"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <org.han.lsb_shop.view.XListView
+        android:id="@+id/listview_notices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/realat_top"
+        android:background="#f2f2f2"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="0px" >
+    </org.han.lsb_shop.view.XListView>
+
+</RelativeLayout>

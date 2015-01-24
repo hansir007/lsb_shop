@@ -40,7 +40,7 @@
             android:padding="6dip"
             android:text="图表"
             android:textColor="#FFFFFF"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
     </RelativeLayout>
 
     <!-- <LinearLayout

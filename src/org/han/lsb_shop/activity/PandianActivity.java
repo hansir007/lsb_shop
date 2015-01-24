@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -53,6 +52,8 @@ public class PandianActivity extends Activity implements OnClickListener,
 		findViewById(R.id.btn_inputM).setOnClickListener(this);
 		findViewById(R.id.btn_cancle).setOnClickListener(this);
 		findViewById(R.id.btn_save).setOnClickListener(this);
+		findViewById(R.id.btn_back).setOnClickListener(this);
+		findViewById(R.id.btn_history).setOnClickListener(this);
 
 		myapp = (MyApplication) getApplication();
 		handler = new Handler(this);
@@ -103,6 +104,7 @@ public class PandianActivity extends Activity implements OnClickListener,
 				findViewById(R.id.content).setVisibility(View.GONE);
 				findViewById(R.id.btn_group).setVisibility(View.GONE);
 				tiaoma = "";
+				num_s.setText("");
 				Toast.makeText(PandianActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
 			} catch (Exception e) {
 				Loger.e("TAG", e);
@@ -128,6 +130,9 @@ public class PandianActivity extends Activity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.btn_back:
 			finish();
+			break;
+		case R.id.btn_history:
+			startActivity(new Intent(PandianActivity.this,PandianHistoryActivity.class));
 			break;
 		case R.id.btn_scan:
 			findViewById(R.id.content).setVisibility(View.GONE);

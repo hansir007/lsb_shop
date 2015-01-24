@@ -91,6 +91,10 @@
             android:name="org.han.lsb_shop.activity.MipcaActivityCapture"
             android:label="@string/title_activity_mipca_activity_capture" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.PandianHistoryActivity"
+            android:label="@string/title_activity_pandian_history" >
+        </activity>
     </application>
 
 </manifest>

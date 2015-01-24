@@ -23,7 +23,7 @@
     <string name="title_activity_pandian_cuolou_index">PandianCuolouIndexActivity</string>
     <string name="title_activity_pandian">PandianActivity</string>
     <string name="title_activity_mipca_activity_capture">MipcaActivityCapture</string>
-    
     <string name="scan_text">将二维码/条码放入框内, 即可自动扫描</string>
+    <string name="title_activity_pandian_history">PandianHistoryActivity</string>
 
 </resources>
