@@ -2,15 +2,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".PandianCuolouIndexActivity" >
+    android:background="#FFFFFF" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <RelativeLayout
+        android:id="@+id/realat_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#17AFEE" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="错漏数据"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <ScrollView
+        android:id="@+id/s_"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/realat_top"
+        android:padding="10dip"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/view11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="方式"
+                android:textColor="#666666" />
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view11"
+                android:background="@drawable/login_edit_normal"
+                android:orientation="vertical" >
+
+                <RadioGroup
+                    android:id="@+id/fsgroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/button1"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/button1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="错盘数据"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dip"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/leba_shape_line" />
+
+                    <RadioButton
+                        android:id="@+id/button2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:paddingLeft="10dip"
+                        android:text="漏盘数据"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_1"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_edit_normal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dip"
+                        android:text="盘点日:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/pandianri"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView1"
+                        android:layout_alignBottom="@+id/textView1"
+                        android:layout_toRightOf="@+id/textView1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.3dip"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:background="@drawable/leba_shape_line" />
+
+                <RelativeLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dip"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dip"
+                        android:text="柜组:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/guizu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView2"
+                        android:layout_alignBottom="@+id/textView2"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:background="@null"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/ll_3"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/login_btn"
+                android:padding="5dip"
+                android:text="开始"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+		</RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -26,5 +26,7 @@
     <string name="scan_text">将二维码/条码放入框内, 即可自动扫描</string>
     <string name="title_activity_pandian_history">PandianHistoryActivity</string>
     <string name="title_activity_shishi_shop_sale">ShishiShopSaleActivity</string>
+    <string name="title_activity_pandian_cuo">PandianCuoActivity</string>
+    <string name="title_activity_pandian_lou">PandianLouActivity</string>
 
 </resources>
