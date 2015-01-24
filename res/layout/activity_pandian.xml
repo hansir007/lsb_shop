@@ -34,7 +34,7 @@
     <Button
         android:id="@+id/btn_scan"
         android:layout_width="fill_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dip"
         android:layout_below="@+id/realat_top"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/btn_inputM"
         android:layout_width="fill_parent"
-        android:layout_height="30dip"
+        android:layout_height="40dip"
         android:layout_below="@+id/btn_scan"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"

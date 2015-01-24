@@ -11,10 +11,13 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int biaotou=0x7f040002;
-        public static final int black=0x7f040001;
-        public static final int shape_line=0x7f040003;
-        public static final int white=0x7f040000;
+        public static final int biaotou=0x7f050002;
+        public static final int black=0x7f050001;
+        public static final int possible_result_points=0x7f050006;
+        public static final int result_view=0x7f050004;
+        public static final int shape_line=0x7f050003;
+        public static final int viewfinder_mask=0x7f050005;
+        public static final int white=0x7f050000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -23,8 +26,8 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int back=0x7f020000;
@@ -47,135 +50,165 @@ public final class R {
         public static final int xlistview_arrow=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f090047;
-        public static final int btn_back=0x7f09000c;
-        public static final int btn_inputM=0x7f090014;
-        public static final int btn_login=0x7f09000a;
-        public static final int btn_register=0x7f09000b;
-        public static final int btn_regsave=0x7f09002f;
-        public static final int btn_scan=0x7f090013;
-        public static final int btn_start=0x7f090026;
-        public static final int button1=0x7f090019;
-        public static final int button2=0x7f09001a;
-        public static final int button3=0x7f09001e;
-        public static final int button4=0x7f09001f;
-        public static final int button5=0x7f090020;
-        public static final int chengben_db=0x7f09003c;
-        public static final int content=0x7f090016;
-        public static final int edit_username=0x7f090006;
-        public static final int edit_userpwd=0x7f090009;
-        public static final int fsgroup=0x7f090018;
-        public static final int fwgroup=0x7f09001d;
-        public static final int guizu=0x7f090025;
-        public static final int imageView_ItemImage=0x7f090036;
-        public static final int listview_notices=0x7f090033;
-        public static final int litubiao=0x7f090034;
-        public static final int ll1=0x7f090004;
-        public static final int ll2=0x7f090007;
-        public static final int ll3=0x7f090024;
-        public static final int ll4=0x7f09002c;
-        public static final int ll_1=0x7f090003;
-        public static final int ll_2=0x7f09001c;
-        public static final int ll_3=0x7f090021;
-        public static final int main_radio=0x7f09000d;
-        public static final int maoli_db=0x7f09003d;
-        public static final int mendian_db=0x7f090039;
-        public static final int myname=0x7f090001;
-        public static final int pandian_menu=0x7f090027;
-        public static final int pandianid=0x7f090023;
-        public static final int pandianri=0x7f090022;
-        public static final int radio_0=0x7f09000e;
-        public static final int radio_1=0x7f09000f;
-        public static final int radio_2=0x7f090010;
-        public static final int radio_3=0x7f090011;
-        public static final int realat_top=0x7f090000;
-        public static final int realat_userinfo=0x7f090002;
-        public static final int reg_gonghao=0x7f09002b;
-        public static final int reg_mima=0x7f09002e;
-        public static final int reg_tel=0x7f090029;
-        public static final int reg_username=0x7f090028;
-        public static final int relativeLayout1=0x7f090035;
-        public static final int report_menu_one=0x7f090030;
-        public static final int report_menu_two=0x7f090012;
-        public static final int s_=0x7f090015;
-        public static final int shangmeng_menu=0x7f090031;
-        public static final int shishi_db=0x7f090038;
-        public static final int shouru_db=0x7f09003b;
-        public static final int shuliang_db=0x7f09003a;
-        public static final int textView1=0x7f090005;
-        public static final int textView2=0x7f090008;
-        public static final int textView3=0x7f09002a;
-        public static final int textView4=0x7f09002d;
-        public static final int textView_ItemText=0x7f090037;
-        public static final int tubiao=0x7f090032;
-        public static final int view11=0x7f090017;
-        public static final int view12=0x7f09001b;
-        public static final int xlistview_footer_content=0x7f09003e;
-        public static final int xlistview_footer_hint_textview=0x7f090040;
-        public static final int xlistview_footer_progressbar=0x7f09003f;
-        public static final int xlistview_header_arrow=0x7f090045;
-        public static final int xlistview_header_content=0x7f090041;
-        public static final int xlistview_header_hint_textview=0x7f090043;
-        public static final int xlistview_header_progressbar=0x7f090046;
-        public static final int xlistview_header_text=0x7f090042;
-        public static final int xlistview_header_time=0x7f090044;
+        public static final int about_version_code=0x7f07000e;
+        public static final int action_settings=0x7f07005a;
+        /**  Messages IDs 
+         */
+        public static final int auto_focus=0x7f070000;
+        public static final int btn_back=0x7f07001f;
+        public static final int btn_inputM=0x7f070027;
+        public static final int btn_login=0x7f07001d;
+        public static final int btn_register=0x7f07001e;
+        public static final int btn_regsave=0x7f070042;
+        public static final int btn_scan=0x7f070026;
+        public static final int btn_start=0x7f070039;
+        public static final int button1=0x7f07002c;
+        public static final int button2=0x7f07002d;
+        public static final int button3=0x7f070031;
+        public static final int button4=0x7f070032;
+        public static final int button5=0x7f070033;
+        public static final int chengben_db=0x7f07004f;
+        public static final int content=0x7f070029;
+        public static final int decode=0x7f070001;
+        public static final int decode_failed=0x7f070002;
+        public static final int decode_succeeded=0x7f070003;
+        public static final int edit_username=0x7f070019;
+        public static final int edit_userpwd=0x7f07001c;
+        public static final int encode_failed=0x7f070004;
+        public static final int encode_succeeded=0x7f070005;
+        public static final int fsgroup=0x7f07002b;
+        public static final int fwgroup=0x7f070030;
+        public static final int gridview=0x7f07000c;
+        public static final int guizu=0x7f070038;
+        public static final int imageView_ItemImage=0x7f070049;
+        public static final int include1=0x7f070012;
+        public static final int launch_product_query=0x7f070006;
+        public static final int listview_notices=0x7f070046;
+        public static final int litubiao=0x7f070047;
+        public static final int ll1=0x7f070017;
+        public static final int ll2=0x7f07001a;
+        public static final int ll3=0x7f070037;
+        public static final int ll4=0x7f07003f;
+        public static final int ll_1=0x7f070016;
+        public static final int ll_2=0x7f07002f;
+        public static final int ll_3=0x7f070034;
+        public static final int main_radio=0x7f070020;
+        public static final int maoli_db=0x7f070050;
+        public static final int mendian_db=0x7f07004c;
+        public static final int myname=0x7f070014;
+        public static final int pandian_menu=0x7f07003a;
+        public static final int pandianid=0x7f070036;
+        public static final int pandianri=0x7f070035;
+        public static final int preview_view=0x7f070010;
+        public static final int quit=0x7f070007;
+        public static final int radio_0=0x7f070021;
+        public static final int radio_1=0x7f070022;
+        public static final int radio_2=0x7f070023;
+        public static final int radio_3=0x7f070024;
+        public static final int realat_top=0x7f070013;
+        public static final int realat_userinfo=0x7f070015;
+        public static final int reg_gonghao=0x7f07003e;
+        public static final int reg_mima=0x7f070041;
+        public static final int reg_tel=0x7f07003c;
+        public static final int reg_username=0x7f07003b;
+        public static final int relativeLayout1=0x7f070048;
+        public static final int report_menu_one=0x7f070043;
+        public static final int report_menu_two=0x7f070025;
+        public static final int restart_preview=0x7f070008;
+        public static final int return_scan_result=0x7f070009;
+        public static final int s_=0x7f070028;
+        public static final int search_book_contents_failed=0x7f07000a;
+        public static final int search_book_contents_succeeded=0x7f07000b;
+        public static final int shangmeng_menu=0x7f070044;
+        public static final int shishi_db=0x7f07004b;
+        public static final int shouru_db=0x7f07004e;
+        public static final int shuliang_db=0x7f07004d;
+        public static final int split=0x7f07000f;
+        public static final int textView1=0x7f070018;
+        public static final int textView2=0x7f07001b;
+        public static final int textView3=0x7f07003d;
+        public static final int textView4=0x7f070040;
+        public static final int textView_ItemText=0x7f07004a;
+        public static final int tubiao=0x7f070045;
+        public static final int view11=0x7f07002a;
+        public static final int view12=0x7f07002e;
+        public static final int viewfinder_view=0x7f070011;
+        public static final int webview=0x7f07000d;
+        public static final int xlistview_footer_content=0x7f070051;
+        public static final int xlistview_footer_hint_textview=0x7f070053;
+        public static final int xlistview_footer_progressbar=0x7f070052;
+        public static final int xlistview_header_arrow=0x7f070058;
+        public static final int xlistview_header_content=0x7f070054;
+        public static final int xlistview_header_hint_textview=0x7f070056;
+        public static final int xlistview_header_progressbar=0x7f070059;
+        public static final int xlistview_header_text=0x7f070055;
+        public static final int xlistview_header_time=0x7f070057;
     }
     public static final class layout {
         public static final int activity_blank_menu=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_menu_two=0x7f030003;
-        public static final int activity_pandian=0x7f030004;
-        public static final int activity_pandian_create=0x7f030005;
-        public static final int activity_pandian_cuolou_index=0x7f030006;
-        public static final int activity_pandian_menu=0x7f030007;
-        public static final int activity_reg=0x7f030008;
-        public static final int activity_report_menu_one=0x7f030009;
-        public static final int activity_shangmeng_menu=0x7f03000a;
-        public static final int activity_shishi_sale=0x7f03000b;
-        public static final int activity_shishi_sale_tubiao=0x7f03000c;
-        public static final int gridview_item=0x7f03000d;
-        public static final int listview_shishi_sale=0x7f03000e;
-        public static final int xlistview_footer=0x7f03000f;
-        public static final int xlistview_header=0x7f030010;
+        public static final int activity_capture=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_menu_two=0x7f030004;
+        public static final int activity_pandian=0x7f030005;
+        public static final int activity_pandian_create=0x7f030006;
+        public static final int activity_pandian_cuolou_index=0x7f030007;
+        public static final int activity_pandian_menu=0x7f030008;
+        public static final int activity_reg=0x7f030009;
+        public static final int activity_report_menu_one=0x7f03000a;
+        public static final int activity_shangmeng_menu=0x7f03000b;
+        public static final int activity_shishi_sale=0x7f03000c;
+        public static final int activity_shishi_sale_tubiao=0x7f03000d;
+        public static final int activity_title=0x7f03000e;
+        public static final int gridview_item=0x7f03000f;
+        public static final int listview_shishi_sale=0x7f030010;
+        public static final int xlistview_footer=0x7f030011;
+        public static final int xlistview_header=0x7f030012;
     }
     public static final class menu {
-        public static final int blank_menu=0x7f080000;
-        public static final int login=0x7f080001;
-        public static final int main=0x7f080002;
-        public static final int menu_two=0x7f080003;
-        public static final int pandian=0x7f080004;
-        public static final int pandian_create=0x7f080005;
-        public static final int pandian_cuolou_index=0x7f080006;
-        public static final int pandian_menu=0x7f080007;
-        public static final int reg=0x7f080008;
-        public static final int report_menu_one=0x7f080009;
-        public static final int shangmeng_menu=0x7f08000a;
-        public static final int shishi_sale=0x7f08000b;
-        public static final int shishi_sale_tubiao=0x7f08000c;
+        public static final int blank_menu=0x7f0a0000;
+        public static final int login=0x7f0a0001;
+        public static final int main=0x7f0a0002;
+        public static final int menu_two=0x7f0a0003;
+        public static final int mipca_activity_capture=0x7f0a0004;
+        public static final int pandian=0x7f0a0005;
+        public static final int pandian_create=0x7f0a0006;
+        public static final int pandian_cuolou_index=0x7f0a0007;
+        public static final int pandian_menu=0x7f0a0008;
+        public static final int reg=0x7f0a0009;
+        public static final int report_menu_one=0x7f0a000a;
+        public static final int shangmeng_menu=0x7f0a000b;
+        public static final int shishi_sale=0x7f0a000c;
+        public static final int shishi_sale_tubiao=0x7f0a000d;
+    }
+    public static final class raw {
+        public static final int beep=0x7f040000;
+        public static final int realm_properties=0x7f040001;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int title_activity_blank_menu=0x7f06000a;
-        public static final int title_activity_main=0x7f060003;
-        public static final int title_activity_menu_two=0x7f060006;
-        public static final int title_activity_pandian=0x7f060014;
-        public static final int title_activity_pandian_create=0x7f060012;
-        public static final int title_activity_pandian_cuolou_index=0x7f060013;
-        public static final int title_activity_pandian_menu=0x7f060008;
-        public static final int title_activity_reg=0x7f060004;
-        public static final int title_activity_report_menu_one=0x7f060005;
-        public static final int title_activity_shangmeng_menu=0x7f060009;
-        public static final int title_activity_shishi_sale=0x7f060007;
-        public static final int title_activity_shishi_sale_tubiao=0x7f060011;
-        public static final int xlistview_footer_hint_normal=0x7f06000f;
-        public static final int xlistview_footer_hint_ready=0x7f060010;
-        public static final int xlistview_header_hint_loading=0x7f06000d;
-        public static final int xlistview_header_hint_normal=0x7f06000b;
-        public static final int xlistview_header_hint_ready=0x7f06000c;
-        public static final int xlistview_header_last_time=0x7f06000e;
+        public static final int action_settings=0x7f080001;
+        public static final int app_name=0x7f080000;
+        public static final int hello_world=0x7f080002;
+        public static final int scan_text=0x7f080016;
+        public static final int title_activity_blank_menu=0x7f08000a;
+        public static final int title_activity_main=0x7f080003;
+        public static final int title_activity_menu_two=0x7f080006;
+        public static final int title_activity_mipca_activity_capture=0x7f080015;
+        public static final int title_activity_pandian=0x7f080014;
+        public static final int title_activity_pandian_create=0x7f080012;
+        public static final int title_activity_pandian_cuolou_index=0x7f080013;
+        public static final int title_activity_pandian_menu=0x7f080008;
+        public static final int title_activity_reg=0x7f080004;
+        public static final int title_activity_report_menu_one=0x7f080005;
+        public static final int title_activity_shangmeng_menu=0x7f080009;
+        public static final int title_activity_shishi_sale=0x7f080007;
+        public static final int title_activity_shishi_sale_tubiao=0x7f080011;
+        public static final int xlistview_footer_hint_normal=0x7f08000f;
+        public static final int xlistview_footer_hint_ready=0x7f080010;
+        public static final int xlistview_header_hint_loading=0x7f08000d;
+        public static final int xlistview_header_hint_normal=0x7f08000b;
+        public static final int xlistview_header_hint_ready=0x7f08000c;
+        public static final int xlistview_header_last_time=0x7f08000e;
     }
     public static final class style {
         /** 
@@ -199,15 +232,16 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f090001;
         /**  自定义模板样式 
          */
-        public static final int BlackTheme=0x7f070002;
-        public static final int MyTheme=0x7f070003;
-        public static final int main_tab_bottom=0x7f070004;
+        public static final int BlackTheme=0x7f090002;
+        public static final int MyTheme=0x7f090003;
+        public static final int main_tab_bottom=0x7f090004;
+        public static final int main_tab_center=0x7f090005;
     }
 }
