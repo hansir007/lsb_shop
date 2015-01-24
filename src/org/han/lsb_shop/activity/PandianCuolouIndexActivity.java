@@ -71,6 +71,7 @@ public class PandianCuolouIndexActivity extends Activity implements OnClickListe
 			}else{
 				startActivity(new Intent(PandianCuolouIndexActivity.this, PandianLouActivity.class));
 			}
+			break;
 		case R.id.btn_back:
 			finish();
 			break;
