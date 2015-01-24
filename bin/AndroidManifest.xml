@@ -95,6 +95,10 @@
             android:name="org.han.lsb_shop.activity.PandianHistoryActivity"
             android:label="@string/title_activity_pandian_history" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ShishiShopSaleActivity"
+            android:label="@string/title_activity_shishi_shop_sale" >
+        </activity>
     </application>
 
 </manifest>

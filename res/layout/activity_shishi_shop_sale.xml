@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="实时销售"
+            android:text="门店实时销售"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
         
@@ -49,18 +49,18 @@
         android:layout_height="40dp"
         android:layout_below="@+id/realat_top"
         android:background="#103E5C"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="center"
         android:visibility="gone" >
 
         <TextView
-            android:id="@+id/mendian"
+            android:id="@+id/bumen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
-            android:text="门店" />
+            android:text="部门" />
 
         <TextView
             android:id="@+id/shuliang"
@@ -109,5 +109,5 @@
         android:divider="#00000000"
         android:dividerHeight="0px" >
     </org.han.lsb_shop.view.XListView>
-    
+
 </RelativeLayout>

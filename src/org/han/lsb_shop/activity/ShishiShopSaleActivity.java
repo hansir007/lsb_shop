@@ -6,12 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.han.lsb_shop.R;
-
 import org.han.lsb_shop.adapter.ShishiSaleAdapter;
+import org.han.lsb_shop.adapter.ShishiShopSaleAdapter;
 import org.han.lsb_shop.entity.ShopShishiSale;
-import org.han.lsb_shop.util.*;
+import org.han.lsb_shop.util.Http_Value;
+import org.han.lsb_shop.util.Loger;
+import org.han.lsb_shop.util.MyApplication;
 import org.han.lsb_shop.view.XListView;
-
 import org.han.lsb_shop.view.XListView.IXListViewListener;
 import org.json.JSONObject;
 
@@ -21,64 +22,57 @@ import android.os.Handler.Callback;
 import android.os.Message;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SimpleAdapter;
-import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ShishiSaleActivity extends Activity implements OnClickListener,IXListViewListener, Callback {
+public class ShishiShopSaleActivity extends Activity  implements OnClickListener,IXListViewListener, Callback{
 
 	private MyApplication myapp;
 	private AlertDialog dlg_progressbar;// 加载
 	private Handler handler;
 	private Map<String, String> map = new HashMap<String, String>();
 	private XListView listview_notices;
-	private ShishiSaleAdapter adapter;
-	private List<ShopShishiSale> lists = new ArrayList<ShopShishiSale>();
+	private ShishiShopSaleAdapter adapter;
+	private List<Map<String, String>> lists = new ArrayList<Map<String, String>>();
 
 	private final int TRUE = 200;
 	private final int FALSE = 404;
 	private int start = 1;
 	private int width;
 	
-	private TextView mendian,shuliang,shouru,chengben;
-
+	private TextView bumen,shuliang,shouru,chengben;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_shishi_sale);
+		setContentView(R.layout.activity_shishi_shop_sale);
 		
 		myapp = (MyApplication) getApplication();
 		handler = new Handler(this);
-		dlg_progressbar = new AlertDialog.Builder(ShishiSaleActivity.this).create();
+		dlg_progressbar = new AlertDialog.Builder(ShishiShopSaleActivity.this).create();
 		
 		findViewById(R.id.btn_back).setOnClickListener(this);
 		findViewById(R.id.tubiao).setOnClickListener(this);
 		
 		WindowManager wm = this.getWindowManager();
 		width = wm.getDefaultDisplay().getWidth();
-		mendian = (TextView)findViewById(R.id.mendian);
+		bumen = (TextView)findViewById(R.id.bumen);
 		shuliang = (TextView)findViewById(R.id.shuliang);
 		shouru = (TextView)findViewById(R.id.shouru);
 		chengben = (TextView)findViewById(R.id.chengben);
-		mendian.setWidth(width/100*30);
+		bumen.setWidth(width/100*30);
 		shuliang.setWidth(width/100*17);
 		shouru.setWidth(width/100*17);
 		chengben.setWidth(width/100*17);
 		
 		listview_notices = (XListView) findViewById(R.id.listview_notices);
-		adapter = new ShishiSaleAdapter(ShishiSaleActivity.this, lists, this);
+		adapter = new ShishiShopSaleAdapter(ShishiShopSaleActivity.this, lists, this);
 		listview_notices.setPullLoadEnable(true);
 		listview_notices.setXListViewListener(this);
 		listview_notices.setAdapter(adapter);
@@ -119,14 +113,10 @@ public class ShishiSaleActivity extends Activity implements OnClickListener,IXLi
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.tubiao:
-			startActivity(new Intent(ShishiSaleActivity.this, ShishiSaleTubiaoActivity.class));
+			startActivity(new Intent(ShishiShopSaleActivity.this, ShishiSaleTubiaoActivity.class));
 			break;
 		case R.id.btn_back:
 			finish();
-			break;
-		case R.id.shishi_db:
-			Log.i("TAG", "打开门店报表");
-			startActivity(new Intent(ShishiSaleActivity.this, ShishiShopSaleActivity.class));
 			break;
 		default:
 			break;
@@ -201,19 +191,24 @@ public class ShishiSaleActivity extends Activity implements OnClickListener,IXLi
 				 * jsonobj.getString("message"), Toast.LENGTH_SHORT).show(); }
 				 */
 				findViewById(R.id.biaotou).setVisibility(View.VISIBLE);
-				ShopShishiSale sale = new ShopShishiSale("1", "门店1", "数量1", "收入1", "成本1",
-						"毛利1");
-				lists.add(sale);
-				sale = new ShopShishiSale("2", "门店2", "数量2", "收入2", "成本2",
-						"毛利2");
-				lists.add(sale);
-				sale = new ShopShishiSale("3", "门店3", "数量3", "收入3", "成本3",
-						"毛利3");
-				lists.add(sale);
+				Map<String, String> map = new HashMap<String, String>();
+				map.put("bumen", "生鲜");
+				map.put("shuliang", String.valueOf(12));
+				map.put("shouru", String.valueOf(123));
+				map.put("chengben", String.valueOf(352));
+				map.put("maoli", String.valueOf(345));
+				lists.add(map);
+				map = new HashMap<String, String>();
+				map.put("bumen", "食品");
+				map.put("shuliang", String.valueOf(567));
+				map.put("shouru", String.valueOf(768));
+				map.put("chengben", String.valueOf(324));
+				map.put("maoli", String.valueOf(65));
+				lists.add(map);
 				adapter.notifyDataSetChanged();
 			} catch (Exception e) {
 				Loger.e("TAG", e);
-				Toast.makeText(ShishiSaleActivity.this, "服务器返回异常",
+				Toast.makeText(ShishiShopSaleActivity.this, "服务器返回异常",
 						Toast.LENGTH_SHORT).show();
 			}
 			break;
@@ -230,6 +225,4 @@ public class ShishiSaleActivity extends Activity implements OnClickListener,IXLi
 		}
 		return false;
 	}
-
-
 }

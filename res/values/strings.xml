@@ -25,5 +25,6 @@
     <string name="title_activity_mipca_activity_capture">MipcaActivityCapture</string>
     <string name="scan_text">将二维码/条码放入框内, 即可自动扫描</string>
     <string name="title_activity_pandian_history">PandianHistoryActivity</string>
+    <string name="title_activity_shishi_shop_sale">ShishiShopSaleActivity</string>
 
 </resources>

@@ -7,7 +7,8 @@
 	<LinearLayout
 	    android:id="@+id/shishi_db"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal" >
 
         <TextView
