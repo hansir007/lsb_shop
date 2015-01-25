@@ -43,6 +43,12 @@ public class ShangmengMenuActivity extends Activity {
 		map1.put("itemId", "duizhang");
 		lst.add(map1);
 		
+		map = new HashMap<String, Object>();
+		map.put("itemImage", R.drawable.pandian); 
+		map.put("itemText", "绑卡充值");
+		map.put("itemId", "chongzhi");
+		lst.add(map);
+		
 		SimpleAdapter adpter = new SimpleAdapter(this, lst,
 				R.layout.gridview_item,
 				new String[] { "itemImage", "itemText" }, new int[] {
@@ -64,9 +70,11 @@ public class ShangmengMenuActivity extends Activity {
 			
 			Intent intent = new Intent();
 			if(itemId.equals("xiaofei")){
-				intent.setClass(ShangmengMenuActivity.this, MenuTwoActivity.class);
+				intent.setClass(ShangmengMenuActivity.this, XiaofeiActivity.class);
 			}else if(itemId.equals("duizhang")){
-				intent.setClass(ShangmengMenuActivity.this, MenuTwoActivity.class);
+				intent.setClass(ShangmengMenuActivity.this, DuizhangActivity.class);
+			}else if(itemId.equals("chongzhi")){
+				intent.setClass(ShangmengMenuActivity.this, ChongzhiActivity.class);
 			}
 			startActivity(intent);
 			//Toast.makeText(getApplicationContext(), ""+str, 0).show();

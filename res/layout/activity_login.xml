@@ -30,21 +30,25 @@
             android:textSize="12sp" />
     </RelativeLayout>
 
-    <RelativeLayout
+   <!--  <RelativeLayout
         android:id="@+id/realat_userinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/realat_top"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-        android:layout_marginTop="40dip" >
+        android:layout_marginTop="40dip" > -->
 
         <LinearLayout
-            android:id="@+id/ll_1"
+            android:id="@+id/realat_userinfo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edit_normal"
-            android:orientation="vertical" >
+            android:layout_below="@+id/realat_top"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dip"
+	        android:layout_marginRight="10dip"
+	        android:layout_marginTop="40dip" >
 
             <RelativeLayout
                 android:id="@+id/ll1"
@@ -118,7 +122,7 @@
                     android:textSize="16sp" />
             </RelativeLayout>
         </LinearLayout>
-    </RelativeLayout>
+    <!-- </RelativeLayout> -->
 
     <Button
         android:id="@+id/btn_login"

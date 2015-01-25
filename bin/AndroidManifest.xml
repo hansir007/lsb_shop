@@ -107,6 +107,18 @@
             android:name="org.han.lsb_shop.activity.PandianLouActivity"
             android:label="@string/title_activity_pandian_lou" >
         </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.XiaofeiActivity"
+            android:label="@string/title_activity_xiaofei" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.DuizhangActivity"
+            android:label="@string/title_activity_duizhang" >
+        </activity>
+        <activity
+            android:name="org.han.lsb_shop.activity.ChongzhiActivity"
+            android:label="@string/title_activity_chongzhi" >
+        </activity>
     </application>
 
 </manifest>

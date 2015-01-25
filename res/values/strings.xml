@@ -28,5 +28,8 @@
     <string name="title_activity_shishi_shop_sale">ShishiShopSaleActivity</string>
     <string name="title_activity_pandian_cuo">PandianCuoActivity</string>
     <string name="title_activity_pandian_lou">PandianLouActivity</string>
+    <string name="title_activity_xiaofei">XiaofeiActivity</string>
+    <string name="title_activity_duizhang">DuizhangActivity</string>
+    <string name="title_activity_chongzhi">ChongzhiActivity</string>
 
 </resources>
